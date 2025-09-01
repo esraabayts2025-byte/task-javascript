@@ -48,3 +48,39 @@
 
 //     return result;
 // }
+// let mark_math = 59
+// let mark_prog = 59
+// let mark_eng = 59
+// let mark_fre = 59
+const lables =["math","prog","eng","fre"]
+const mark1 = [60,50,60,60] 
+const mark2 = [60,50,60,60] 
+const mark3 = [60,50,60,60] 
+
+var nedded =2;
+function passed(mark){
+    if(mark>=60){
+        return true
+}
+else if (mark +nedded >=60){
+    nedded =nedded-(60-mark)
+    return true
+}
+else{
+    return false
+}
+}
+// console.log(passed(60))
+// console.log(passed(60))
+// console.log(passed(50))
+// console.log(passed(60))
+// console.log("********")
+// console.log(nedded)
+
+
+let res = true
+for (let i=0; i<mark.length;i++){
+    if (!passed(mark[i]))
+        res= false
+}
+console.log(res)
